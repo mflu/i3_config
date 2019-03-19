@@ -9,6 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+workspace_layout stacked
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -112,7 +114,7 @@ bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
+bindsym $mod+5 workspace $ws5;layout tabbed
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
@@ -172,7 +174,6 @@ bindsym --release $mod+Print exec "scrot 'scrot-%Y-%m-%d_%h-%m-%s_$wx$h.png' -e 
 
 #mod+shift+printscrn: take selection screenshot, place in ~/img/scrot, copy to clipboard
 bindsym --release $mod+Shift+Print exec "scrot --select 'scrot-%Y-%m-%d_%h-%m-%s_$wx$h_snip.png' -e 'mv $f ~/Pictures/scrot/ && xclip -t image/png ~/Pictures/scrot/$f -sel clip'"
-
 
 #**************************************************主题设置*********************************************
 # 窗口颜色				边框	背景	文字	提示
@@ -286,8 +287,7 @@ assign [class="Google-chrome"] 3
 assign [class="Code"] 4
 # MAIL
 assign [class="Mailspring"] 5
-# CAL
-assign [class="MineTime"] 6
+assign [class="MineTime"] 5
 # CHAT
 assign [class="Reliao"] 7
 # Office
