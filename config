@@ -8,9 +8,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
-workspace_layout stacked
-
+workspace_layout default
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -280,14 +278,16 @@ assign [class="Gnome-terminal"] 1
 assign [class="Nautilus"] 2
 #assign [class="Shutter"] 2
 assign [class="VirtualBox Manager"] 2
+# CHAT
+assign [title="Wechat"] 6
 # WEB
-assign [title="Wechat"] 7
 assign [class="Google-chrome"] 3
 # IDE
 assign [class="Code"] 4
 # MAIL
 assign [class="Mailspring"] 5
 assign [class="MineTime"] 5
+assign [class="pomotodo-nativefier-240e74"] 5
 # CHAT
 assign [class="Reliao"] 7
 # Office
@@ -304,13 +304,34 @@ exec_always --no-startup-id feh --bg-scale "/home/flu/Pictures/space.jpeg"
 #exec_always --no-startup-id feh --bg-scale "/home/flu/Pictures/i3wm.png"
 #exec_always --no-startup-id xcompmgr
 #exec_always --no-startup-id xcompmgr
+
+
 exec_always --no-startup-id "killall compton; compton &"
+
 exec_always --no-startup-id devilspie -a
+
+# ws1
 exec --no-startup-id i3-sensible-terminal
+
+#ws2
+exec --no-startup-id /usr/bin/nautilus
+
+#ws3
 exec --no-startup-id /opt/google/chrome/chrome
+
+#ws4
 exec --no-startup-id code
+
+#ws5
 exec --no-startup-id /snap/bin/mailspring
 exec --no-startup-id /usr/local/bin/minetime
+exec --no-startup-id ~/workbench/pomotodo-linux-x64/pomotodo
+#ws6
+
+#ws7
+exec --no-startup-id /usr/local/bin/reliao
+
+#no ws
 exec --no-startup-id /usr/bin/kupfer
 # use scrot instead
 #exec --no-startup-id /usr/bin/shutter
